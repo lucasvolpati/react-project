@@ -9,9 +9,9 @@ export const Route = createLazyFileRoute('/clients')({
 
 function Clients() {
   useEffect(() => {
-    document.title = 'Clientes'; // Alterando o título dinamicamente
+    document.title = 'Clientes';
   }, []);
-  
+
   const { formData } = clientsUseStore()
 
   /**

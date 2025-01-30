@@ -9,7 +9,7 @@ export const Route = createLazyFileRoute('/')({
 
 function Index() {
   useEffect(() => {
-      document.title = 'Home'; // Alterando o título dinamicamente
+      document.title = 'Home';
     }, []);
 
   return (

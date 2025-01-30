@@ -1,6 +1,6 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/router-devtools'
-import { Box, Flex, Heading, Container } from "@chakra-ui/react"
+import { Box, Flex, Heading, Container, Button } from "@chakra-ui/react"
 
 export const Route = createRootRoute({
   component: () => (
@@ -11,13 +11,17 @@ export const Route = createRootRoute({
                 React Project
             </Heading>
 
-            <Flex justifyContent={"space-around"} width="40%">
-                <Link px={2} py={8} color="white" to="/" className="[&.active]:font-bold">
-                    Home
-                </Link>
-                <Link px={2} py={8} color="white" to="/clients" className="[&.active]:font-bold">
-                    Clientes
-                </Link>
+            <Flex justifyContent={"center"} width="40%">
+                <Button variant="ghost">
+                    <Link px={2} py={8} color="white" to="/" className="[&.active]:font-bold">
+                        Home
+                    </Link> 
+                </Button>
+                <Button variant="ghost">
+                    <Link px={2} py={8} color="white" to="/clients" className="[&.active]:font-bold">
+                        Clientes
+                    </Link>
+                </Button>
             </Flex>
         </Flex>
         </Box>
