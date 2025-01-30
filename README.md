@@ -10,6 +10,12 @@
 - Tan Stack Router
 - SweetAlert
 
+## Instalar as dependências do projeto
+
+```
+npm install
+```
+
 ## Para executar o projeto em desenvolvimento
 
 ```
