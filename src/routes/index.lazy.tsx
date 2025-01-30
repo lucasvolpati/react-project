@@ -1,12 +1,16 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
 import { Box, Card } from '@chakra-ui/react'
 import ClientForm from '@/components/ClientForm'
+import { useEffect } from 'react';
 
 export const Route = createLazyFileRoute('/')({
   component: Index,
 })
 
 function Index() {
+  useEffect(() => {
+      document.title = 'Home'; // Alterando o título dinamicamente
+    }, []);
 
   return (
     <Card.Root width="100%">

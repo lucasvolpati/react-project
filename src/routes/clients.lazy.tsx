@@ -1,12 +1,17 @@
 import { createLazyFileRoute } from '@tanstack/react-router'
 import { clientsUseStore } from '@/stores/clients'
 import { Box, Card, Table } from '@chakra-ui/react'
+import { useEffect } from 'react';
 
 export const Route = createLazyFileRoute('/clients')({
   component: Clients,
 })
 
 function Clients() {
+  useEffect(() => {
+    document.title = 'Clientes'; // Alterando o título dinamicamente
+  }, []);
+  
   const { formData } = clientsUseStore()
 
   /**
